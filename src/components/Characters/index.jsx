@@ -1,7 +1,30 @@
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 import CharCard from "../CharCard";
 import "./styles.css";
 
-function Characters({ characterList }) {
+function Characters() {
+  const [page, setPage] = useState(1);
+  const [switchPage, setSwitchPage] = useState({});
+  const [characterList, setCharacterList] = useState([]);
+
+  useEffect(() => {
+    api
+      .get("character", { params: { page: page } })
+      .then(
+        ({
+          data: {
+            results,
+            info: { next, prev },
+          },
+        }) => {
+          setSwitchPage({ next, prev });
+          setCharacterList(results);
+        }
+      )
+      .catch((error) => console.log(error));
+  }, [page]);
+
   const liList = characterList.map((character) => (
     <CharCard key={character.id} character={character} />
   ));
