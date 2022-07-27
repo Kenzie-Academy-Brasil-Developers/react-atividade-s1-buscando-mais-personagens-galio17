@@ -1,0 +1,27 @@
+:root {
+  font-family: "Rick and Morty";
+  color: cadetblue;
+  -webkit-text-stroke: 0.75px yellow;
+}
+
+@font-face {
+  font-family: "Rick and Morty";
+  src: url(assets/fonts/rick-and-morty.ttf);
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/img/kisspng-rick-sanchez-illustration-drawing-cartoon-image-vento-aureo-confirmed-5b63b0986c8632.7604224815332599284445.png");
+  background-size: 160px;
+  background-color: #313131;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,60 @@
+.card {
+  padding: 5px;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card__img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card__description {
+  background-color: white;
+  position: absolute;
+  padding: 5px;
+  width: 289px;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.Alive {
+  background-color: #adff2f;
+}
+
+.Dead {
+  background-color: #dc143c;
+}
+
+.unknown {
+  background-color: darkgray;
+}
+
+.card__name {
+  font-size: 2rem;
+}
+
+.card__specie {
+  font-size: 0rem;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card:hover .card__description {
+  height: 100px;
+}
+
+.card:hover .card__specie {
+  font-size: 1.5rem;
+}

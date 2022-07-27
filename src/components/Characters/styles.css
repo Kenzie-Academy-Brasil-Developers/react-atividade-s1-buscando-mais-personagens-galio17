@@ -1,0 +1,16 @@
+header {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
