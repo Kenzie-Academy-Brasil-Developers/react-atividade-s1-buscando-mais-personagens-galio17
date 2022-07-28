@@ -1,0 +1,17 @@
+button {
+  background-color: #1f1f1f;
+  color: inherit;
+  border-radius: 4px;
+  padding: 10px 15px;
+  height: 36px;
+  font-family: inherit;
+  -webkit-text-stroke-width: 0.2px;
+}
+
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
