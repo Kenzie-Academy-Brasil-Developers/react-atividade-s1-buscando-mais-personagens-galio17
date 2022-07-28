@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import CharCard from "../CharCard";
+import NavigationChar from "../NavigationChar";
 import "./styles.css";
 
 function Characters() {
@@ -15,10 +16,10 @@ function Characters() {
         ({
           data: {
             results,
-            info: { next, prev },
+            info: { prev, next },
           },
         }) => {
-          setSwitchPage({ next, prev });
+          setSwitchPage({ prev, next });
           setCharacterList(results);
         }
       )
@@ -35,6 +36,7 @@ function Characters() {
         <h1>Meus personagens</h1>
       </header>
       <main>
+        <NavigationChar setPage={setPage} switchPage={switchPage} />
         <ul>{liList}</ul>
       </main>
     </div>
